@@ -36,16 +36,10 @@ def get_filters():
     while True:
         day = input('Would you like to filter the data for specific day of week or all?\n').lower()
         if day not in days:
-            print('\n Invalid Input, please try again')
+            print('\n Invalid Input, try again')
             continue
         else:
             break
-      
-    # TO DO: get user input for month (all, january, february, ... , june)
-
-    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
-
-    print('-'*40)
     
     return city, month, day
 
@@ -105,19 +99,14 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    # TO DO: display the most common month
     common_month = df['month'].mode()[0]
 
-    # TO DO: display the most common day of week
     common_day = df['day_of_week'].mode()[0]
 
-    # TO DO: display the most common start hour
     df['hour'] = df['Start Time'].dt.hour
     common_hour = df['hour'].mode()[0]
 
     print('the most common month: {}, the most common day: {}, the most common hour: {}'.format(common_month, common_day, common_hour))
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
 
 
 def station_stats(df):
