@@ -2,6 +2,8 @@ import time
 import pandas as pd
 import numpy as np
 
+# This project you will be working with 3 types of city data and analyze them.
+
 CITY_DATA = { 'Chicago': 'chicago.csv',
               'New York': 'new_york_city.csv',
               'Washington': 'washington.csv' }
@@ -41,10 +43,6 @@ def get_filters():
         else:
             break
       
-    # TO DO: get user input for month (all, january, february, ... , june)
-
-    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
-
     print('-'*40)
     
     return city, month, day
